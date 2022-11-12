@@ -9,6 +9,12 @@ volumes:
 
 services:
 
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+
   database:
     image: postgres:13
     ports:
@@ -28,6 +34,7 @@ services:
       target: base
     depends_on:
       - database
+      - adminer
     ports:
       - '${PORT}:${PORT}'
     environment:
