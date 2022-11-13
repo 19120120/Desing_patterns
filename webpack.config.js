@@ -8,7 +8,7 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 module.exports = (async () => {
   return {
     entry: {
-      index: [path.resolve(__dirname, '/src/index.ts')],
+      index: [path.resolve(__dirname, 'src/index.ts')],
     },
     output: {
       libraryTarget: 'commonjs',
